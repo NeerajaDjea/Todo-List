@@ -1,0 +1,40 @@
+<div class="container">
+
+
+    <div class="main">
+        <header @fade></header>
+
+        <input type="text" class="todo-input" placeholder="Add a task" [(ngModel)]="todoTitle" (keyup.enter)="addTodo()">
+        <div class="todo-item">
+            <div class="todo-item" *ngFor="let todo of todos" @fade>
+                <div class="todo-item-left">
+                    <input type="checkbox" [(ngModel)]="todo.completed">
+                    <div [ngClass]="{'completed':todo.completed}" (dblclick)="editTodo()" class="todo-item-label ">{{ todo.title }}</div>
+
+
+                    <div class="remove-item " (click)="deleteTodo(todo.id) ">
+                        &times;
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="extra-container ">
+                <div>
+
+
+                    <!-- <button (click)="allTodo()">All</button> -->
+                    <button (click)="clearCompleted()">Active</button>
+                    <button (click)="todoCompleted()">Completed</button>
+
+                    <button>{{remainingTodo()}} Items left</button>
+
+                </div>
+                <button *ngIf='anyCompleted()' (click)="clearCompleted()">Clear Completed</button>
+            </div>
+        </div>
+    </div>

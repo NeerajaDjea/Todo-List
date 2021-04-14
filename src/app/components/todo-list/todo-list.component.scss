@@ -1,0 +1,129 @@
+.todo-input {
+    text-align: center;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background-color: white;
+    // background-color: rgb(220, 234, 247);
+    border: 1px solid rgb(8, 38, 89);
+    box-shadow: 2px 3px grey;
+    color: rgb(8, 38, 89);
+    ;
+    &:focus {
+        outline: 0;
+    }
+}
+
+.container {
+    padding: 0px;
+    text-align: center;
+}
+
+.main {
+    margin-top: 50px;
+    display: inline-block;
+    background-color: aliceblue;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 80%;
+    align-self: center;
+    border: 1px solid rgb(8, 38, 89);
+    box-shadow: 2px 5px grey;
+}
+
+.header {
+    background-color: aliceblue;
+    color: rgb(8, 38, 89);
+    display: flex;
+    margin-right: 150px;
+    margin-left: 150px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 4px;
+}
+
+.todo-item {
+    margin-bottom: 2px;
+    align-items: center;
+    justify-content: space-between;
+    animation-duration: 0.3s;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(8, 38, 89)
+}
+
+input {
+    padding: 12px !important
+}
+
+.remove-item {
+    padding: 5px;
+    cursor: pointer;
+    color: darkcyan;
+    ;
+    margin-right: 14px;
+    &:hover {
+        color: rgb(8, 38, 89);
+    }
+}
+
+.todo-item-left {
+    // later
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input[type="checkbox"] {
+    background-color: blueviolet;
+}
+
+.todo-item-label {
+    padding: 10px;
+    border: 1px solid white;
+    margin-left: 12px;
+}
+
+.completed {
+    text-decoration: line-through rgb(85, 139, 125);
+}
+
+.extra-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    border-top: 1px solid rgb(8, 38, 89);
+    padding-top: 14px;
+    margin-bottom: 14px;
+}
+
+button {
+    font-size: 14px;
+    border: 2px solid rgb(8, 38, 89);
+    background-color: white;
+    appearance: none;
+    border-radius: 2px;
+    &:hover {
+        background: rgb(130, 218, 197);
+        ;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.active {
+    background: rgb(100, 211, 185);
+    ;
+}
