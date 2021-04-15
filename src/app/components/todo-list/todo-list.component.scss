@@ -95,7 +95,8 @@ input {
 }
 
 .completed {
-    text-decoration: line-through rgb(85, 139, 125);
+    text-decoration: line-through darkcyan;
+    opacity: 0.7;
 }
 
 .extra-container {

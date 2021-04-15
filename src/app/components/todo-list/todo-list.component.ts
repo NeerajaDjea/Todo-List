@@ -28,9 +28,11 @@ export class TodoListComponent implements OnInit {
   todoTitle: string;
   idForTodo: number;
   filter: string;
+  selectedTodo: Todo = new Todo;
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.selectedTodo)
     this.filter = 'all';
     this.idForTodo = 4;
     this.todoTitle = '';
@@ -93,11 +95,23 @@ export class TodoListComponent implements OnInit {
 
     });
   }
-  editTodo() {
-    alert('edit')
+  editTodo(todo: Todo) {
+    this.selectedTodo = todo
+
+  }
+  sendTodoToListEventHandler(todo: Todo) {
+    console.log(this.selectedTodo)
+    console.log(todo.title)
+    this.todos.forEach(() => {
+      if (this.selectedTodo)
+      {
+        this.selectedTodo.title = todo.title;
+      }
+
+
+      this.selectedTodo = null;
+    })
   }
 
 }
-
-
 

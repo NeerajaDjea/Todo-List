@@ -7,14 +7,16 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TodoEditComponent } from './components/todo-edit/todo-edit.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    TodoListComponent
+    TodoListComponent,
+    TodoEditComponent
   ],
   imports: [
     BrowserModule,

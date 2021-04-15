@@ -7,7 +7,8 @@
 
 @media screen and(max-width:767px) {
     .footer {
-        position: relative;
+        position: absolute;
+        bottom: 0;
     }
 }
 
@@ -17,4 +18,5 @@
     text-align: center;
     padding: 10px 0px;
     border-top: 2px solid darkcyan;
+    margin-bottom: 0;
 }

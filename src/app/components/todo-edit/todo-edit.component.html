@@ -1,0 +1,5 @@
+<form class="form-inline" #todoForm="ngForm" (ngSubmit)="updateTodo(todoForm)" novalidate>
+
+    <input type="text" class="form-control" name="title" [ngModel]="selectedTodo.title"><i class="fas fa-edit"></i>
+
+</form>
