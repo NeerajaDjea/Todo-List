@@ -2,12 +2,12 @@
 
 
     <div class="main">
-        <header @fade></header>
+        <header> {{date | date}}</header>
 
         <input type="text" class="todo-input" placeholder="Add a task " [(ngModel)]="todoTitle" (keyup.enter)="addTodo()">
 
         <div class="todo-item">
-            <div class="todo-item" *ngFor="let todo of todos" (dblclick)="editTodo(todo)" @fade>
+            <div class="todo-item" *ngFor="let todo of todos" (dblclick)="editTodo(todo)">
                 <div *ngIf="selectedTodo != todo">
                     <div class="todo-item-left">
                         <input type="checkbox" [(ngModel)]="todo.completed">

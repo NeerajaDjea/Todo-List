@@ -1,5 +1,5 @@
 input {
-    border: 2px solid darkcyan;
+    border: 1px solid darkcyan;
     padding: 4px;
     font-size: large;
 }
@@ -7,4 +7,10 @@ input {
 i {
     margin-left: 5px;
     color: darkcyan;
+    font-weight: 100;
+}
+
+.form-inline {
+    text-align: left;
+    padding-left: 22px;
 }

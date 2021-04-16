@@ -1,3 +1,5 @@
+$primary-color: darkcyan;
+$secondary-color: rgb(8, 38, 89);
 .todo-input {
     text-align: center;
     width: 100%;
@@ -5,8 +7,7 @@
     font-size: 16px;
     margin-bottom: 20px;
     background-color: white;
-    // background-color: rgb(220, 234, 247);
-    border: 1px solid rgb(8, 38, 89);
+    border: 1px solid $secondary-color;
     box-shadow: 2px 3px grey;
     color: rgb(8, 38, 89);
     ;
@@ -26,26 +27,10 @@
     background-color: aliceblue;
     margin-bottom: 20px;
     padding: 10px;
-    width: 80%;
+    width: 60%;
     align-self: center;
     border: 1px solid rgb(8, 38, 89);
     box-shadow: 2px 5px grey;
-}
-
-.header {
-    background-color: aliceblue;
-    color: rgb(8, 38, 89);
-    display: flex;
-    margin-right: 150px;
-    margin-left: 150px;
-    align-self: center;
-    display: flex;
-    justify-content: center;
-}
-
-img {
-    margin-top: 20px;
-    margin-left: 10px;
 }
 
 button {
@@ -60,7 +45,7 @@ button {
     animation-duration: 0.3s;
     font-size: 20px;
     font-weight: 500;
-    color: rgb(8, 38, 89)
+    color: $secondary-color
 }
 
 input {
@@ -70,22 +55,18 @@ input {
 .remove-item {
     padding: 5px;
     cursor: pointer;
-    color: darkcyan;
-    ;
+    color: darken($color: $primary-color, $amount: 5);
+    font-weight: 500;
     margin-right: 14px;
     &:hover {
         color: rgb(8, 38, 89);
+        font-weight: 900;
     }
 }
 
 .todo-item-left {
-    // later
     display: flex;
     align-items: center;
-}
-
-.checkbox input[type="checkbox"] {
-    background-color: blueviolet;
 }
 
 .todo-item-label {
@@ -95,7 +76,7 @@ input {
 }
 
 .completed {
-    text-decoration: line-through darkcyan;
+    text-decoration: line-through $primary-color;
     opacity: 0.7;
 }
 
@@ -104,19 +85,19 @@ input {
     align-items: center;
     justify-content: space-between;
     font-size: 16px;
-    border-top: 1px solid rgb(8, 38, 89);
+    border-top: 1px solid $secondary-color;
     padding-top: 14px;
     margin-bottom: 14px;
 }
 
 button {
     font-size: 14px;
-    border: 2px solid rgb(8, 38, 89);
+    border: 2px solid $secondary-color;
     background-color: white;
     appearance: none;
     border-radius: 2px;
     &:hover {
-        background: rgb(130, 218, 197);
+        background: $primary-color;
         ;
     }
     &:focus {
@@ -125,6 +106,18 @@ button {
 }
 
 .active {
-    background: rgb(100, 211, 185);
-    ;
+    background: (darken($color: $primary-color, $amount: 10));
+}
+
+header {
+    text-align: right;
+    margin-bottom: 5px;
+    color: $primary-color;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+        width: 90%
+    }
 }

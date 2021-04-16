@@ -1,15 +1,17 @@
+$primary-color: darkcyan;
+$secondary-color: rgb(8, 38, 89);
 .header {
     background-color: aliceblue;
-    color: rgb(8, 38, 89);
+    color: $secondary-color;
     display: flex;
     align-self: center;
     display: flex;
     justify-content: center;
-    padding: 20px 10px;
+    padding: 20px;
     border-bottom: 3px solid darkcyan;
 }
 
 i {
     margin-left: 10px;
-    color: darkcyan;
+    color: $primary-color;
 }

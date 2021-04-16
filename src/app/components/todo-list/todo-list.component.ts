@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
-import { Todo } from '../../models/Todo'
+import { Todo } from '../../models/Todo';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -28,10 +29,14 @@ export class TodoListComponent implements OnInit {
   todoTitle: string;
   idForTodo: number;
   filter: string;
+  date
   selectedTodo: Todo = new Todo;
-  constructor() { }
+  constructor() {
+    BrowserAnimationsModule
+  }
 
   ngOnInit(): void {
+    this.date = new Date();
     console.log(this.selectedTodo)
     this.filter = 'all';
     this.idForTodo = 4;
@@ -99,6 +104,8 @@ export class TodoListComponent implements OnInit {
     this.selectedTodo = todo
 
   }
+
+  // function to edit the todo 
   sendTodoToListEventHandler(todo: Todo) {
     console.log(this.selectedTodo)
     console.log(todo.title)

@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Todo } from 'src/app/models/Todo';
 
 import { TodoEditComponent } from './todo-edit.component';
 
@@ -10,7 +11,7 @@ describe('TodoEditComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ TodoEditComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +20,4 @@ describe('TodoEditComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });
